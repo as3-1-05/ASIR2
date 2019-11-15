@@ -125,11 +125,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Enviar">
+                <input type="submit" class="btn btn-primary" value="Enviar" a href="login.php">
                 <input type="reset" class="btn btn-default" value="Resetear">
             </div>
             <p>Tienes una cuenta y se te ha olvidado? Estas mas empanado que guillermo dando clase de sistemas, ah espera, que no da clases... 
-                <a href="registro.php">Iniciar sesion</a>.</p>
+                <a href="login.php">Iniciar sesion</a>.</p>
         </form>
     </div>    
 </body>
