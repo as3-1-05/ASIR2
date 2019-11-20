@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 //
 $id = $_POST["id"];
-$sql = "DELETE FROM blog WHERE id=$id";
+$sql = "DELETE FROM empleados WHERE id=$id";
 
 $result = $conn->query($sql);
 header("Location: delete_form.php");

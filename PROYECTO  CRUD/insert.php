@@ -1,29 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">    
-<head>
-<meta charset="UTF-8">    
-<title>Add Record Form</title>
-</head>
+<?php
 
-<body>
-<form action="config.php" method="post">
+    $result = false;
 
-    <p>
-        <label for="nombre">Nombre</label>
-        <input type="text" name="firstname" id="firstName">    
-    </p>
+    $dbhost = 'localhost';
+    $username = 'root';
+    $password = '';
+    $db = 'joncrud';
 
-    <p>
-        <label for="apellido">Apellido</label>
-        <input type="text" name="lastname" id="lastName">    
-    </p>
+    if( $_SERVER['REQUEST_METHOD']=='POST' ){
 
-    <p>    
-        <label for="img">Imagen</label>
-        <input type="text" name="email" id="emailAddress">    
-    </p>
+        $conn = new mysqli ( $dbhost,$username, $password, $db );
+        if( $conn ){
 
-    <input type="submit" value="Submit">
-</form>
-</body>
+            $sql='insert into `empleados` ( `nombre`,`apellido`,`img` ) values (?,?,?);';
+            $stmt=$conn->prepare( $sql );
+            $stmt->bind_param('sss', $_POST['nombre'], $_POST['apellido'], $_POST['img'] );
+            $result = $stmt->execute();
+
+        }
+        $conn->close();
+    }
+
+?>
+<!doctype html>
+<html>
+    <head>
+        <title>Simple Form submission example</title>
+    </head>
+    <body>
+        <form method='post'>
+            <input type='text' name='nombre' />
+            <input type='text' name='apellido' />
+            <input type='text' name='img' />
+
+            <input type='submit' value='Submit' />
+
+            <?php
+                echo $result ? '<div>The database was updated</div>' : '';
+            ?>
+        </form>
+    </body>
 </html>
