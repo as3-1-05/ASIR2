@@ -4,7 +4,7 @@
 </head>
  
 <body>
-    <a href="index.php">Home</a> <br />
+    <a href="index.php"><h1>Itzuli</h1></a> <br><br>
     <?php
     include("connection.php");
  
@@ -22,9 +22,9 @@
             mysqli_query($mysqli, "INSERT INTO login(name, email, username, password) VALUES('$name', '$email', '$user', md5('$pass'))")
             or die("Could not execute the insert query.");
             
-            echo "Registration successfully";
-            echo "<br/>";
-            echo "<a href='login.php'>Login</a>";
+            echo "<h1>Kontua sortuta</h1>"; 
+            echo "<br><br>";
+            echo "<a href='login.php'><h1>Sartu</h1></a>";
         }
     } else {
 ?>

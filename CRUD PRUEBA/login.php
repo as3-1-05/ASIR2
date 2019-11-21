@@ -5,7 +5,7 @@
 </head>
  
 <body>
-<a href="index.php">Home</a> <br />
+<a href="index.php">Itzuli</a> <br />
 <?php
 include("connection.php");
  
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
     $pass = mysqli_real_escape_string($mysqli, $_POST['password']);
  
     if($user == "" || $pass == "") {
-        echo "Either username or password field is empty.";
+        echo "Gaizki.";
         echo "<br/>";
         echo "<a href='login.php'>Go back</a>";
     } else {
@@ -29,9 +29,9 @@ if(isset($_POST['submit'])) {
             $_SESSION['name'] = $row['name'];
             $_SESSION['id'] = $row['id'];
         } else {
-            echo "Invalid username or password.";
+            echo "Gaizki";
             echo "<br/>";
-            echo "<a href='login.php'>Go back</a>";
+            echo "<a href='login.php'>Itzuli</a>";
         }
  
         if(isset($_SESSION['valid'])) {
@@ -40,20 +40,20 @@ if(isset($_POST['submit'])) {
     }
 } else {
 ?>
-    <p><font size="+2">Login</font></p>
+    <p><font size="+2">Sartu</font></p>
     <form name="form1" method="post" action="">
         <table width="75%" border="0">
             <tr> 
-                <td width="10%">Username</td>
+                <td width="10%">Erabiltzailea</td>
                 <td><input type="text" name="username"></td>
             </tr>
             <tr> 
-                <td>Password</td>
+                <td>Pasahitza</td>
                 <td><input type="password" name="password"></td>
             </tr>
             <tr> 
                 <td>&nbsp;</td>
-                <td><input type="submit" name="submit" value="Submit"></td>
+                <td><input type="submit" name="Submit" value="Sartu"></td>
             </tr>
         </table>
     </form>
