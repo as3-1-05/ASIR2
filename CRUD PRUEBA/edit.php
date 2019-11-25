@@ -60,21 +60,21 @@ while($res = mysqli_fetch_array($result))
 </head>
  
 <body>
-    <a href="index.php">Home</a> | <a href="view.php">View Products</a> | <a href="logout.php">Logout</a>
+    <a href="index.php">Itzuli</a> | <a href="view.php">Ikusi produktuak</a> | <a href="logout.php">Logout</a>
     <br/><br/>
     
     <form name="form1" method="post" action="edit.php">
         <table border="0">
             <tr> 
-                <td>Name</td>
+                <td>Izena</td>
                 <td><input type="text" name="name" value="<?php echo $name;?>"></td>
             </tr>
             <tr> 
-                <td>Quantity</td>
+                <td>Kantitatea</td>
                 <td><input type="text" name="qty" value="<?php echo $qty;?>"></td>
             </tr>
             <tr> 
-                <td>Price</td>
+                <td>Prezioa (Euroa)</td>
                 <td><input type="text" name="price" value="<?php echo $price;?>"></td>
             </tr>
             <tr>

@@ -16,19 +16,19 @@ $result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=".$_SESSI
  
 <html>
 <head>
-    <title>Homepage</title>
+    <title>Itzuli</title>
 </head>
  
 <body>
-<a href="index.php">Home</a> | <a href="add.html">Add New Data</a> | <a href="logout.php">Logout</a>
+<a href="index.php">Itzuli</a> | <a href="add.html">Sartu informazioa</a> | <a href="logout.php">Sesioa itxi</a>
 <br/><br/>
     
 <table width='80%' border=0>
     <tr bgcolor='#CCCCCC'>
-        <td>Name</td>
-        <td>Quantity</td>
-        <td>Price (euro)</td>
-        <td>Update</td>
+        <td>Izena</td>
+        <td>Kantitatea</td>
+        <td>Prezioa (Euro)</td>
+        <td>Editatu</td>
     </tr>
     <?php
     while($res = mysqli_fetch_array($result)) {        

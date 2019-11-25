@@ -8,7 +8,7 @@ if(!isset($_SESSION['valid'])) {
  
 <html>
 <head>
-    <title>Add Data</title>
+    <title>Sartu informazioa</title>
 </head>
  
 <body>
@@ -45,8 +45,8 @@ if(isset($_POST['Submit'])) {
         $result = mysqli_query($mysqli, "INSERT INTO products(name, qty, price, login_id) VALUES('$name','$qty','$price', '$loginId')");
         
         //display success message
-        echo "<font color='green'>Data added successfully.";
-        echo "<br/><a href='view.php'>View Result</a>";
+        echo "<font color='green'>Ongi.";
+        echo "<br/><a href='view.php'>Ikusi datuak</a>";
     }
 }
 ?>
