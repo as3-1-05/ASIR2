@@ -5,6 +5,14 @@
 </head>
  
 <body>
+
+
+<html>
+<head>
+    <title>Login</title>
+</head>
+ 
+<body>
 <a href="index.php">Itzuli</a> <br />
 <?php
 include("connection.php");
@@ -14,7 +22,7 @@ if(isset($_POST['submit'])) {
     $pass = mysqli_real_escape_string($mysqli, $_POST['password']);
  
     if($user == "" || $pass == "") {
-        echo "Gaizki.";
+        echo "Either username or password field is empty.";
         echo "<br/>";
         echo "<a href='login.php'>Go back</a>";
     } else {
@@ -29,9 +37,9 @@ if(isset($_POST['submit'])) {
             $_SESSION['name'] = $row['name'];
             $_SESSION['id'] = $row['id'];
         } else {
-            echo "Gaizki";
+            echo "Invalid username or password.";
             echo "<br/>";
-            echo "<a href='login.php'>Itzuli</a>";
+            echo "<a href='login.php'>Go back</a>";
         }
  
         if(isset($_SESSION['valid'])) {
@@ -53,7 +61,7 @@ if(isset($_POST['submit'])) {
             </tr>
             <tr> 
                 <td>&nbsp;</td>
-                <td><input type="submit" name="Submit" value="Sartu"></td>
+                <td><input type="submit" name="submit" value="Sartu"></td>
             </tr>
         </table>
     </form>

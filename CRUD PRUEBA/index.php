@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <html>
 <head>
-    <title></title>
+    <title>Homepage</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
  
@@ -14,16 +14,16 @@
         include("connection.php");                    
         $result = mysqli_query($mysqli, "SELECT * FROM login");
     ?>                
-        Ongi etorri! <?php echo $_SESSION['name'] ?> ! <a href='logout.php'>Irten</a><br/>
+        Hola <?php echo $_SESSION['name'] ?> ! <a href='index.php'>Irten</a><br/>
         <br/>
         <a href='view.php'>Ikusi produktuak</a>
         <br/><br/>
     <?php    
     } else {
-        echo "Kontua behar duzu web orrira sartzeko<br/><br/>";
+        echo "Kontua sortu behar duzu produktuak ikusteko.<br/><br/>";
         echo "<a href='login.php'>Sartu</a> | <a href='register.php'>Erregistratu</a>";
     }
     ?>
-
+    
 </body>
 </html>
