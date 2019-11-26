@@ -10,4 +10,3 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 ?>
 
 
-dsdsdsd
