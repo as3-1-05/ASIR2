@@ -64,6 +64,24 @@ if(isset($_POST['submit'])) {
                 <td><input type="submit" name="submit" value="Sartu"></td>
             </tr>
         </table>
+
+        <table width='80%' border=0>
+    <tr bgcolor='#CCCCCC'>
+        <td>Izena</td>
+        <td>Kantitatea</td>
+        <td>Prezioa (Euro)</td>
+        <td>Editatu</td>
+    </tr>
+    <?php
+    while($res = mysqli_fetch_array($result)) {        
+        echo "<tr>";
+        echo "<td>".$res['name']."</td>";
+        echo "<td>".$res['qty']."</td>";
+        echo "<td>".$res['price']."</td>";    
+                
+    }
+    ?>
+</table> 
     </form>
 <?php
 }
