@@ -24,7 +24,7 @@
         echo "<a href='login.php'>Sartu</a> | <a href='register.php'>Erregistratu</a>";
     }
     ?>
-    
+   <br><br><br><br> 
     <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -34,17 +34,17 @@ $link = mysqli_connect("localhost", "root", "", "test2");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+
 // Attempt select query execution
 $sql = "SELECT * FROM products";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<tr>";
-                echo "<th>id</th>";
-                echo "<th>nombre</th>";
-                echo "<th>cantidad</th>";
-                echo "<th>precio</th>";
+        echo "<table width='80%' border=0>";
+            echo "<tr bgcolor='#CCCCCC'>";
+                echo "<td>id</td>";
+                echo "<td>nombre</td>";
+                echo "<td>cantidad</td>";
+                echo "<td>precio</td>";
             echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
