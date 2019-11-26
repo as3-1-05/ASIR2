@@ -42,9 +42,9 @@ if($result = mysqli_query($link, $sql)){
         echo "<table>";
             echo "<tr>";
                 echo "<th>id</th>";
-                echo "<th>name</th>";
-                echo "<th>qty</th>";
-                echo "<th>price</th>";
+                echo "<th>nombre</th>";
+                echo "<th>cantidad</th>";
+                echo "<th>precio</th>";
             echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
