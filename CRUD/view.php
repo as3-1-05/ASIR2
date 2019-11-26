@@ -7,10 +7,10 @@ if(!isset($_SESSION['valid'])) {
 ?>
  
 <?php
-//including the database connection file
+
 include_once("connection.php");
  
-//fetching data in descending order (lastest entry first)
+
 $result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=".$_SESSION['id']." ORDER BY id DESC");
 ?>
  

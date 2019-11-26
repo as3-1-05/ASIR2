@@ -7,7 +7,7 @@ if(!isset($_SESSION['valid'])) {
 ?>
  
 <?php
-// including the database connection file
+
 include_once("connection.php");
  
 if(isset($_POST['update']))
@@ -18,7 +18,7 @@ if(isset($_POST['update']))
     $qty = $_POST['qty'];
     $price = $_POST['price'];    
     
-    // checking empty fields
+  
     if(empty($name) || empty($qty) || empty($price)) {                
         if(empty($name)) {
             echo "<font color='red'>Name field is empty.</font><br/>";
@@ -32,19 +32,19 @@ if(isset($_POST['update']))
             echo "<font color='red'>Price field is empty.</font><br/>";
         }        
     } else {    
-        //updating the table
+        
         $result = mysqli_query($mysqli, "UPDATE products SET name='$name', qty='$qty', price='$price' WHERE id=$id");
         
-        //redirectig to the display page. In our case, it is view.php
+        
         header("Location: view.php");
     }
 }
 ?>
 <?php
-//getting id from url
+
 $id = $_GET['id'];
  
-//selecting data associated with this particular id
+
 $result = mysqli_query($mysqli, "SELECT * FROM products WHERE id=$id");
  
 while($res = mysqli_fetch_array($result))

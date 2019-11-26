@@ -13,7 +13,7 @@ if(!isset($_SESSION['valid'])) {
  
 <body>
 <?php
-//including the database connection file
+
 include_once("connection.php");
  
 if(isset($_POST['Submit'])) {    
@@ -22,7 +22,7 @@ if(isset($_POST['Submit'])) {
     $price = $_POST['price'];
     $loginId = $_SESSION['id'];
         
-    // checking empty fields
+    
     if(empty($name) || empty($qty) || empty($price)) {                
         if(empty($name)) {
             echo "<font color='red'>Name field is empty.</font><br/>";
@@ -36,15 +36,15 @@ if(isset($_POST['Submit'])) {
             echo "<font color='red'>Price field is empty.</font><br/>";
         }
         
-        //link to the previous page
+        
         echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
     } else { 
-        // if all the fields are filled (not empty) 
+      
             
-        //insert data to database    
+          
         $result = mysqli_query($mysqli, "INSERT INTO products(name, qty, price, login_id) VALUES('$name','$qty','$price', '$loginId')");
         
-        //display success message
+     
         echo "<font color='green'>Ongi.";
         echo "<br/><a href='view.php'>Ikusi datuak</a>";
     }
