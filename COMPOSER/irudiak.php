@@ -9,4 +9,4 @@ use Intervention\Image\ImageManager;
 $manager = new ImageManager(array('driver' => 'imagick'));
 
 // to finally create image instances
-$image = $manager->make('public/foo.jpg')->resize(300, 200);
+$image = $manager->make('unnamed.png')->resize(300, 200);
