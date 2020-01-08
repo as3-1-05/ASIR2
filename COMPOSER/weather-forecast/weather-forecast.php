@@ -6,6 +6,6 @@ use DmitryIvanov\DarkSkyApi\DarkSkyApi;
 $forecast = (new DarkSkyApi('e41d8193b1312dc0eb8f4916dcfe5e1a'))
     ->location(46.482, 30.723)
     ->units('si')
-    ->language('ru')
+    ->language('en')
     ->forecast();
 echo $forecast->currently()->summary();
