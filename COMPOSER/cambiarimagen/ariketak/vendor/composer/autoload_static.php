@@ -24,6 +24,10 @@ class ComposerStaticInit104a36ae95a4bb58ea11a504a37b2a06
         array (
             'GuzzleHttp\\Psr7\\' => 16,
         ),
+        'E' => 
+        array (
+            'Emojione\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -38,6 +42,10 @@ class ComposerStaticInit104a36ae95a4bb58ea11a504a37b2a06
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'Emojione\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/emojione/emojione/lib/php/src',
         ),
     );
 
