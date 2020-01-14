@@ -7,6 +7,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-
+        <main class="container text-center">
+            <h1 class="display-1">Forecast</h1>
+        </main>
     </body>
 </html>
