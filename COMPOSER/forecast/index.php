@@ -9,6 +9,10 @@
     <body>
         <main class="container text-center">
             <h1 class="display-1">Forecast</h1>
+            <div class="card p-4" style="margin: 0 auto; max-width: 320px;">
+                <h2>Current Forecast</h2>
+                <h3 class="display-2">75&deg;</h3>
+            </div>
         </main>
     </body>
 </html>
