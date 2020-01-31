@@ -1,6 +1,6 @@
 <?php
 
-    $coordinates = 
+    $coordinates = '37.8267,-122.4233';
 
     $api_url = 'https://api.darksky.net/forecast/
         e41d8193b1312dc0eb8f4916dcfe5e1a/37.8267,-122.4233';
