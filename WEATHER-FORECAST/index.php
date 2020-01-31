@@ -2,7 +2,8 @@
 
     $coordinates = 
 
-    $api_url = 
+    $api_url = 'https://api.darksky.net/forecast/
+        e41d8193b1312dc0eb8f4916dcfe5e1a/37.8267,-122.4233';
 
     $forecast = json_decode(file_get_contents($apu_url));
 
@@ -26,5 +27,7 @@
                 <div class="card p-4" style="margin: 0 auto; max-width: 320px;">
                     <h2>Eguraldia</h2>
                     <h3 class="display">75&deg;</h3>
+                </div>
+        </main>
     </body>
 </html>
