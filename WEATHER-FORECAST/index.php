@@ -2,8 +2,7 @@
 
     $coordinates = '34.5794,-118.1165';
 
-    $api_url = 'https://api.darksky.net/forecast/
-        e41d8193b1312dc0eb8f4916dcfe5e1a/34.5794,-118.1165'.$coordinates>
+    $api_url = 'https://api.darksky.net/forecast/e41d8193b1312dc0eb8f4916dcfe5e1a/34.5794,-118.1165'.$coordinates>
 
     $forecast = json_decode(file_get_contents($api_url));
 
