@@ -11,8 +11,9 @@
     echo '</pre>';
 
     // Datuak
-    $temperature_current = $forecast->currently->temperature;
+    $temperature_current = round($forecast->currently->temperature);
     $summary_current = $forecast->currently->summary;
+    $windspeed_current = $forecast->currently->windSpeed;
 
 ?>
 
@@ -31,6 +32,7 @@
                     <h2>Eguraldia</h2>
                     <h3 class="display-2"><?php echo $temperature_current; ?>&deg;</h3>
                     <p class="lead"><?php echo $summary_current; ?></p>
+                    <p class="lead">Wind Speed:<?php echo $windspeed_current; ?></p>
                 </div>
         </main>
     </body>
