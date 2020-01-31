@@ -11,6 +11,8 @@
     print_r($forecast);
     echo '</pre>';
 
+        $temperature_current = $forecast->currently->temperature;
+        
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@
             <h1 class="display-1">Forecast</h1>
                 <div class="card p-4" style="margin: 0 auto; max-width: 320px;">
                     <h2>Eguraldia</h2>
-                    <h3 class="display">75&deg;</h3>
+                    <h3 class="display-2"><?php echo $temperature_current; ?>&deg;</h3>
                 </div>
         </main>
     </body>
