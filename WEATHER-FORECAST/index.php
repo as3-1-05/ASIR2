@@ -11,8 +11,10 @@
     print_r($forecast);
     echo '</pre>';
 
-        $temperature_current = $forecast->currently->temperature;
-        
+    //Datuak
+    $temperature_current = $forecast->currently->temperature;
+    $summary_current = $forecast->currently->summary;
+
 ?>
 
 <!DOCTYPE html>
