@@ -1,9 +1,9 @@
 <?php
 
-    $coordinates = '37.8267,-122.4233';
+    $coordinates = '34.5794,-118.1165';
 
     $api_url = 'https://api.darksky.net/forecast/
-        e41d8193b1312dc0eb8f4916dcfe5e1a/37.8267,-122.4233';
+        e41d8193b1312dc0eb8f4916dcfe5e1a/34.5794,-118.1165'.$coordinates>
 
     $forecast = json_decode(file_get_contents($api_url));
 
@@ -11,7 +11,7 @@
     print_r($forecast);
     echo '</pre>';
 
-    //Datuak
+    // Datuak
     $temperature_current = $forecast->currently->temperature;
     $summary_current = $forecast->currently->summary;
 
