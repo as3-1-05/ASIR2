@@ -13,7 +13,7 @@
     // Datuak
     $temperature_current = round($forecast->currently->temperature);
     $summary_current = $forecast->currently->summary;
-    $windspeed_current = $forecast->currently->windSpeed;
+    $windspeed_current = round($forecast->currently->windSpeed);
 
 ?>
 
