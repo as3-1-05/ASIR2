@@ -1,5 +1,5 @@
 <?php session_start();
-echo 'hola';
+
  ?>
 <html>
 <head>
@@ -21,7 +21,7 @@ include("connection.php");
  
 if(isset($_POST['submit'])) {
     $user = mysqli_real_escape_string($mysqli, $_POST['username']);
-    $pass = mysqli_real_escape_string($mysqli, $_POST['password']);echo 'hola';
+    $pass = mysqli_real_escape_string($mysqli, $_POST['password']);
  
     if($user == "" || $pass == "") {
         echo "Either username or password field is empty.";
