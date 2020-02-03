@@ -2,7 +2,7 @@
 
  
 $databaseHost = 'localhost';
-$databaseName = 'test';
+$databaseName = 'test2';
 $databaseUsername = 'admin';
 $databasePassword = '';
  
