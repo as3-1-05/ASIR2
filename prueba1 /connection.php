@@ -1,16 +1,22 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "test2";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-//echo "Connected successfully";
+/*
+// mysql_connect("database-host", "username", "password")
+$conn = mysql_connect("localhost","root","root")
+            or die("cannot connected");
+ 
+// mysql_select_db("database-name", "connection-link-identifier")
+@mysql_select_db("test2",$conn);
+*/
+ 
+/**
+* mysql_connect is deprecated
+* using mysqli_connect instead
+*/
+ 
+$databaseHost = 'localhost';
+$databaseName = 'test2';
+$databaseUsername = 'root';
+$databasePassword = '';
+ 
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+?>
