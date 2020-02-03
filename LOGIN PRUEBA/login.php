@@ -1,13 +1,6 @@
 <?php session_start(); ?>
 <html>
-<head>
-    <title>Login</title>
-</head>
- 
-<body>
 
-
-<html>
 <head>
     <title>Login</title>
 </head>
