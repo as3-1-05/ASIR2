@@ -68,6 +68,8 @@ if(isset($_POST['submit'])) {
     
 <?php
 }
+
+else{ echo 'hola'; }
 ?>
 </body>
 </html>
